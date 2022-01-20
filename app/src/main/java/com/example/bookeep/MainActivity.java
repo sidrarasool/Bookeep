@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(!pin.isEmpty()) {
             if(pin.equals(original_pin)) {
-//                Intent intent = new Intent(this, MainMenuActivity.class);
-//                startActivity(intent);
+               Intent intent = new Intent(this, MainMenuActivity.class);
+               startActivity(intent);
             }
         }
 
