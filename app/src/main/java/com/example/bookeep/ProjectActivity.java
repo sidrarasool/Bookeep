@@ -9,25 +9,25 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-public class DeveloperActivity extends AppCompatActivity {
-    private static final int NUM_PAGES = 2;
-    private ViewPager viewPager;
-    private PagerAdapter pagerAdapter;
+public class ProjectActivity extends AppCompatActivity {
+    private static final int NUM_PAGES = 4;
+    ViewPager viewPager;
+    PagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_developer);
+        setContentView(R.layout.activity_project);
 
-        viewPager = findViewById(R.id.vp_dev);
-
-        pagerAdapter = new ScreeSlidePagerAdapter(getSupportFragmentManager());
+        viewPager = findViewById(R.id.vp_project);
+        pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(pagerAdapter);
     }
-    private class ScreeSlidePagerAdapter extends FragmentStatePagerAdapter{
 
-        public ScreeSlidePagerAdapter(FragmentManager fm) {
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter{
+
+        public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -35,9 +35,13 @@ public class DeveloperActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return AddDevFragment.newInstance();
+                    return AddProjectFragment.newInstance();
                 case 1:
-                    return ViewDevelopersFragment.newInstance();
+                    return ViewProjectsFragment.newInstance();
+                case 2:
+                    return AddMilestoneFragment.newInstance();
+                case 3:
+                    return GetMilestonesFragment.newInstance();
                 default:
                     return null;
             }
@@ -51,13 +55,16 @@ public class DeveloperActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position){
             switch (position){
                 case 0:
-                    return "Add Dev";
+                    return "Add Project";
                 case 1:
-                    return "View Devs";
+                    return "View Projects";
+                case 2:
+                    return "Add Milestone";
+                case 3:
+                    return "View Milestones";
                 default:
                     return null;
             }
         }
     }
 }
-
