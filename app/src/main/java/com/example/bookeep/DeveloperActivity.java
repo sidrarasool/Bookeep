@@ -25,3 +25,39 @@ public class DeveloperActivity extends AppCompatActivity {
 
         viewPager.setAdapter(pagerAdapter);
     }
+    private class ScreeSlidePagerAdapter extends FragmentStatePagerAdapter{
+
+        public ScreeSlidePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    return AddDevFragment.newInstance();
+                case 1:
+                    return ViewDevelopersFragment.newInstance();
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
+
+        public CharSequence getPageTitle(int position){
+            switch (position){
+                case 0:
+                    return "Add Dev";
+                case 1:
+                    return "View Devs";
+                default:
+                    return null;
+            }
+        }
+    }
+}
+
