@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDebtFragment"
+    android:orientation="vertical"
+    android:background="#ffff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="new_debt"
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/et_from"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="from"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:id="@+id/et_to"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="to"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:hint="amount"
+        android:inputType="numberSigned"
+        android:paddingLeft="10dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="186dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="3dp"
+        android:text="add"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+</LinearLayout>
