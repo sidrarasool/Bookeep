@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPaymentFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/new_payment"
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+        android:id="@+id/et_to"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="@string/to"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="@string/amount"
+        android:layout_marginTop="20dp"
+        android:inputType="numberSigned"
+        />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="30dp"
+        android:text="@string/add"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="3dp"
+        />
+
+</LinearLayout>
